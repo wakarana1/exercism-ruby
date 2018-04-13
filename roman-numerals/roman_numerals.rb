@@ -1,4 +1,4 @@
-class Fixnum
+module RomanNumeral
   def to_roman
     year_array = self.to_s.chars.reverse
     roman_numeral = []
@@ -40,6 +40,10 @@ class Fixnum
     end
     roman_numeral.reverse.join
   end
+end
+
+class Fixnum
+  include RomanNumeral
 end
 
 module BookKeeping
